@@ -15,7 +15,9 @@
 	<description>java js webshell</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+			<java.version>1.8</java.version>
+			<!--  跳过测试类 -->
+			<skipTests>true</skipTests>
 	</properties>
 
 	<dependencies>
@@ -28,7 +30,12 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.1.2</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>false</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -45,13 +52,17 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.18</version>
+		</dependency>
 		<!-- shell 依赖 -->
 		<dependency>
-			<groupId>com.jcraft</groupId>
-			<artifactId>jsch</artifactId>
-			<version>0.1.54</version>
+			<groupId>ch.ethz.ganymed</groupId>
+			<artifactId>ganymed-ssh2</artifactId>
+			<version>build210</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>

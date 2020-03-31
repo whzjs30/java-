@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/app/remoteShell.js" type="text/javascript"></script>
+<body>
+<div style="height: 600px;width: 800px">
+    <textarea id="shell" style="height: 100%;width: 100%;background: black;color: white;resize: none;" readonly></textarea>
+</div>
+<br>
+<li>提示:不要使用编辑文本功能!</li>
+<div style="height: 200px;width: 800px">
+    <textarea id="cmd" style="height: 100%;width: 100%;background: black;color: green;resize: none;"></textarea>
+</div>
+<br>
+<div>
+<input type="button" id="connection"  onclick="reconnection()" value="重新连接" />
+</div>
+</body>
+<script>
+    $(function () {
+
+        $('#cmd').bind('keypress',function(event){
+            if(event.keyCode == "13"){
+                connection();
+                $("#cmd").val("")
+            }
+        });
+
+    })
+</script>
+</html>
