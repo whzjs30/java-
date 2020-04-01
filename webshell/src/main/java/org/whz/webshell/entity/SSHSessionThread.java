@@ -138,12 +138,10 @@ public class SSHSessionThread {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            if(readThread!=null&&readThread.isAlive()) {
-                readThread.interrupt();//没有用
+            if(readThread!=null) {
                 readThread=null;
             }
-            if(readErroThread!=null&&readErroThread.isAlive()) {
-                readErroThread.interrupt();//没有用
+            if(readErroThread!=null) {
                 readThread=null;
             }
             PTYinited=false;

@@ -11,9 +11,9 @@
     <textarea id="shell" style="height: 100%;width: 100%;background: black;color: white;resize: none;" readonly></textarea>
 </div>
 <br>
-<li>提示:不要使用编辑文本功能!</li>
+<hr>
 <div style="height: 200px;width: 800px">
-    <textarea id="cmd" style="height: 100%;width: 100%;background: black;color: green;resize: none;"></textarea>
+    <textarea id="cmd" style="height: 100%;width: 100%;background: black;color: green;resize: none;font-size: 22px"></textarea>
 </div>
 <br>
 <div>
@@ -29,7 +29,7 @@
                 $("#cmd").val("")
             }
         });
-
+        $("#shell").append("提示:不要使用编辑文本功能!\r")
     })
 </script>
 </html>

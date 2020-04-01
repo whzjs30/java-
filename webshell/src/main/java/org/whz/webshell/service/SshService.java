@@ -137,11 +137,11 @@ public class SshService {
         }
         String s1 = cmd.replace("\n", " ");
         String s2 = s1.replace("\r", " ");
-        String s3 = s2.toLowerCase();
-        if(s3.equals("vi")||s3.equals("vim")){
+        String s3 = s2.replace(" ", "").toLowerCase();
+        if(s3.equals("vi")||s3.equals("vim")||s3.equals("exit")){
             return "";
         }
-        return s3;
+        return s2;
     }
 
 }

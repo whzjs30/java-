@@ -23,7 +23,6 @@ import java.util.Map;
 @PropertySource("classpath:SshCfg/SSH.properties")
 @Data
 @Component
-//@Scope("prototype")
 public class SimpleSSHAgent extends BaseService {
     private static Logger logger = LoggerFactory.getLogger(SshService.class);
 

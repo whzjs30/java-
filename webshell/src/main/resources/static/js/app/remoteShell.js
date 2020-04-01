@@ -37,6 +37,9 @@ function connection() {
 
                 }
             }
+            if(Object.keys(data).length === 0){
+                $("#shell").append("无效或暂不支持命令!\r")
+            }
         },
         error:function (data) {
 
